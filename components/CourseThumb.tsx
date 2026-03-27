@@ -1,6 +1,21 @@
 import type { ReactElement } from 'react'
+import Image from 'next/image'
 
-// SVG thumbnail illustrations for each course ID
+// Courses that have real photos — others fall back to SVG illustrations
+const photoThumbs: Record<number, string> = {
+  1: '/course-1.jpg',
+  2: '/course-2.jpg',
+  4: '/course-4.jpg',
+  5: '/course-5.jpg',
+  7: '/course-7.jpg',
+  8: '/course-8.jpg',
+  9: '/course-9.jpg',
+  10: '/course-10.jpg',
+  11: '/course-11.jpg',
+  12: '/course-12.jpg',
+}
+
+// SVG thumbnail illustrations for courses without photos
 
 const thumbs: Record<number, ReactElement> = {
   // 1 — Equitação Básica para Iniciantes
@@ -344,8 +359,24 @@ const thumbs: Record<number, ReactElement> = {
 }
 
 export function CourseThumb({ id }: { id: number }) {
+  const photo = photoThumbs[id]
+
+  if (photo) {
+    return (
+      <div className="w-full aspect-video overflow-hidden relative">
+        <Image
+          src={photo}
+          alt=""
+          fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          className="object-cover object-center"
+        />
+      </div>
+    )
+  }
+
   return (
-    <div className="w-full aspect-video overflow-hidden bg-gray-800 rounded-t-xl">
+    <div className="w-full aspect-video overflow-hidden bg-gray-800">
       {thumbs[id] ?? (
         <div className="w-full h-full bg-gradient-to-br from-brand-forest to-brand-deep flex items-center justify-center">
           <svg width="48" height="48" viewBox="0 0 48 48" fill="none" className="text-white/40">
