@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <section className="relative w-full overflow-hidden">
       {/* Background image — 100% width, natural proportion */}
-      <div className="relative w-full aspect-[16/7] sm:aspect-[16/6] lg:aspect-[16/5]">
+      <div className="relative w-full lg:min-h-[750px] aspect-[16/7] sm:aspect-[16/6] lg:aspect-[16/5]">
         <Image
           src="/hero-horse.jpg"
           alt="Cavalo ao pôr do sol — Instituto Cavalus"
