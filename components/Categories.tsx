@@ -7,14 +7,9 @@ const categories = [
     id: 'equitacao',
     name: 'Equitação & Dressage',
     description: 'Técnicas de equitação, postura e harmonia entre cavaleiro e cavalo.',
-    color: 'from-brand-forest to-brand-deep',
     icon: (
-      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-9 h-9">
-        <path d="M24 6C16 6 10 12 10 20C10 26 14 31 20 33L19 42L24 42L25 34C26.5 34.6 28 35 30 35C34 35 38 33 40 30L42 22C42 22 38 18 34 20C34 20 36 14 32 10C29 7 26 6 24 6Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-        <circle cx="20" cy="19" r="2" fill="currentColor"/>
-        <path d="M32 8C35 6 40 7 41 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-        <path d="M19 33L18 42" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-        <path d="M8 38C10 35 15 34 19 36" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-5 h-5">
+        <path d="M12 3C9 3 7 5.5 7 8c0 2 1 3.5 3 4.5L9.5 18H12L12.5 14C13.2 14.3 14 14.5 15 14.5c2 0 4-1 4.5-3L20 8c0 0-2-2-4-1 0 0 1-2.5-1-4C14 2 13 3 12 3z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
     ),
   },
@@ -22,11 +17,10 @@ const categories = [
     id: 'saude',
     name: 'Saúde & Medicina Equina',
     description: 'Saúde, nutrição, doenças e medicina preventiva para equinos.',
-    color: 'from-brand-olive to-brand-forest',
     icon: (
-      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-9 h-9">
-        <path d="M24 8C15.2 8 8 15.2 8 24C8 32.8 15.2 40 24 40C32.8 40 40 32.8 40 24C40 15.2 32.8 8 24 8Z" stroke="currentColor" strokeWidth="2"/>
-        <path d="M24 16V32M16 24H32" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"/>
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-5 h-5">
+        <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5"/>
+        <path d="M12 8v8M8 12h8" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
       </svg>
     ),
   },
@@ -34,13 +28,11 @@ const categories = [
     id: 'manejo',
     name: 'Manejo & Haras',
     description: 'Gestão de pastagens, instalações, reprodução e cuidados diários.',
-    color: 'from-brand-deep to-brand-olive',
     icon: (
-      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-9 h-9">
-        <rect x="8" y="24" width="32" height="14" rx="2" stroke="currentColor" strokeWidth="2"/>
-        <path d="M8 24L24 10L40 24" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M20 38V28H28V38" stroke="currentColor" strokeWidth="2"/>
-        <path d="M14 31H18M30 31H34" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-5 h-5">
+        <rect x="4" y="12" width="16" height="8" rx="1" stroke="currentColor" strokeWidth="1.5"/>
+        <path d="M4 12L12 5L20 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M10 20V15H14V20" stroke="currentColor" strokeWidth="1.5"/>
       </svg>
     ),
   },
@@ -48,12 +40,9 @@ const categories = [
     id: 'esportes',
     name: 'Esportes Equestres',
     description: 'Salto, CCE, polo, enduro e preparação para competições.',
-    color: 'from-brand-forest to-brand-accent',
     icon: (
-      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-9 h-9">
-        <path d="M24 6L28 16H40L30 23L34 34L24 27L14 34L18 23L8 16H20L24 6Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round"/>
-        <path d="M16 40H32" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-        <path d="M24 34V40" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-5 h-5">
+        <path d="M12 3l2.5 5.5H21l-5.5 4 2 6L12 15l-5.5 3.5 2-6L3 8.5h6.5L12 3Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
       </svg>
     ),
   },
@@ -61,13 +50,10 @@ const categories = [
     id: 'equoterapia',
     name: 'Equoterapia',
     description: 'Terapia assistida por cavalos para reabilitação e desenvolvimento.',
-    color: 'from-brand-olive to-brand-accent',
     icon: (
-      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-9 h-9">
-        <path d="M24 8C20 8 16 10 14 14C12 18 13 23 16 26L24 40L32 26C35 23 36 18 34 14C32 10 28 8 24 8Z" stroke="currentColor" strokeWidth="2" fill="none"/>
-        <path d="M19 20C19 20 21 24 24 24C27 24 29 20 29 20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-        <circle cx="20" cy="17" r="1.5" fill="currentColor"/>
-        <circle cx="28" cy="17" r="1.5" fill="currentColor"/>
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-5 h-5">
+        <path d="M12 4C9 4 7 6 7 9c0 2 1 3.5 2.5 4.5L12 20l2.5-6.5C16 12.5 17 11 17 9c0-3-2-5-5-5Z" stroke="currentColor" strokeWidth="1.5"/>
+        <path d="M9.5 10c0 0 1 2 2.5 2s2.5-2 2.5-2" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
       </svg>
     ),
   },
@@ -75,12 +61,10 @@ const categories = [
     id: 'gestao',
     name: 'Gestão Equestre',
     description: 'Administração de negócios, clínicas veterinárias e haras.',
-    color: 'from-brand-deep to-brand-forest',
     icon: (
-      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-9 h-9">
-        <rect x="8" y="8" width="32" height="32" rx="3" stroke="currentColor" strokeWidth="2"/>
-        <path d="M16 20H32M16 26H26M16 32H22" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-        <path d="M14 8V6M24 8V6M34 8V6" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-5 h-5">
+        <rect x="4" y="4" width="16" height="16" rx="2" stroke="currentColor" strokeWidth="1.5"/>
+        <path d="M8 10h8M8 13h5M8 16h3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
       </svg>
     ),
   },
@@ -88,78 +72,41 @@ const categories = [
 
 export default function Categories() {
   return (
-    <section id="categorias" className="py-20 lg:py-28 bg-surface-muted relative overflow-hidden">
-      {/* Decorative background blob */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-brand-forest/8 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2" />
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+    <section id="categorias" className="py-16 lg:py-24 bg-surface-muted">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-14">
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="flex items-center justify-center gap-3 mb-4"
-          >
-            <span className="h-px w-10 bg-brand-forest" />
-            <span className="font-sans text-brand-forest text-xs font-semibold tracking-[0.2em] uppercase">Áreas de Conhecimento</span>
-            <span className="h-px w-10 bg-brand-forest" />
-          </motion.div>
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="font-display text-brand-deep text-4xl sm:text-5xl font-bold"
-          >
-            Explore todas as categorias
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="font-sans text-brand-text text-lg mt-4 max-w-xl mx-auto"
-          >
-            Do iniciante ao avançado, temos o curso certo para cada etapa da sua jornada equestre.
-          </motion.p>
+        <div className="mb-10">
+          <p className="font-sans text-brand-forest text-xs font-semibold tracking-[0.2em] uppercase mb-2">
+            Áreas de Conhecimento
+          </p>
+          <h2 className="font-display text-brand-secondary text-3xl sm:text-4xl font-bold">
+            Explore as categorias
+          </h2>
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {categories.map((cat, i) => (
             <motion.div
               key={cat.id}
-              initial={{ opacity: 0, y: 24 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.07 }}
-              whileHover={{ y: -5 }}
-              className="group bg-white rounded-2xl border border-brand-forest/10 p-6 cursor-pointer hover:border-brand-forest hover:shadow-xl hover:shadow-brand-forest/15 transition-all duration-300 overflow-hidden relative"
+              transition={{ duration: 0.4, delay: i * 0.06 }}
+              className="group bg-white rounded-xl border border-gray-100 p-5 cursor-pointer hover:border-brand-forest/40 hover:shadow-md transition-all duration-200"
             >
-              {/* Top gradient bar */}
-              <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${cat.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
-
               <div className="flex items-start gap-4">
-                <span className={`flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br ${cat.color} flex items-center justify-center text-white shadow-md shadow-brand-forest/20`}>
+                <span className="flex-shrink-0 w-9 h-9 rounded-lg bg-brand-forest/8 text-brand-forest flex items-center justify-center group-hover:bg-brand-forest group-hover:text-white transition-all duration-200">
                   {cat.icon}
                 </span>
-                <div className="flex-1 min-w-0">
-                  <h3 className="font-display text-brand-deep text-xl font-semibold mb-1.5 leading-snug group-hover:text-brand-forest transition-colors duration-200">
+                <div className="flex-1">
+                  <h3 className="font-display text-brand-secondary text-sm font-semibold mb-1 group-hover:text-brand-forest transition-colors duration-200">
                     {cat.name}
                   </h3>
-                  <p className="font-sans text-brand-text text-sm leading-relaxed">
+                  <p className="font-sans text-brand-text text-xs leading-relaxed">
                     {cat.description}
                   </p>
                 </div>
-              </div>
-              <div className="mt-4 pt-4 border-t border-brand-forest/8 flex items-center">
-                <span className="font-sans text-brand-forest text-xs font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center gap-1">
-                  Ver cursos
-                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                    <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </span>
               </div>
             </motion.div>
           ))}

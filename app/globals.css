@@ -2,23 +2,21 @@
 
 @theme {
   /* Brand palette */
-  --color-brand-secondary: #54595F;
+  --color-brand-secondary: #2d3748;
   --color-brand-text: #4a5568;
   --color-brand-accent: #61CE70;
   --color-brand-olive: #73A722;
   --color-brand-forest: #22A731;
   --color-brand-deep: #058713;
 
-  /* Named surfaces */
+  /* Surfaces */
   --color-surface-dark: #0a2a0c;
-  --color-surface-light: #F0FAF1;
-  --color-surface-muted: #E6F4E8;
-  --color-surface-meadow: #d4edda;
-  --color-surface-cream: #fafdf8;
+  --color-surface-light: #f7f9f7;
+  --color-surface-muted: #f0f4f1;
 
   /* Fonts */
-  --font-display: var(--font-cormorant), 'Georgia', serif;
-  --font-sans: var(--font-raleway), 'Helvetica Neue', sans-serif;
+  --font-display: var(--font-poppins), 'Helvetica Neue', sans-serif;
+  --font-sans: var(--font-opensans), 'Helvetica Neue', sans-serif;
 }
 
 html {
@@ -30,21 +28,12 @@ body {
   background: #ffffff;
   color: var(--color-brand-text);
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5 {
   font-family: var(--font-display);
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-track {
-  background: #0D1F0F;
-}
-::-webkit-scrollbar-thumb {
-  background: #22A731;
-  border-radius: 3px;
-}
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #f0f0f0; }
+::-webkit-scrollbar-thumb { background: #22A731; border-radius: 3px; }

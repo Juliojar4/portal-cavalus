@@ -5,9 +5,9 @@ import { motion } from 'framer-motion'
 const benefits = [
   {
     icon: (
-      <svg width="26" height="26" viewBox="0 0 28 28" fill="none">
-        <circle cx="14" cy="14" r="12" stroke="currentColor" strokeWidth="1.5"/>
-        <path d="M9 14l3.5 3.5L19 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1.5"/>
+        <path d="M8 12l2.5 2.5L16 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
     ),
     title: 'Instrutores de Campo',
@@ -15,20 +15,18 @@ const benefits = [
   },
   {
     icon: (
-      <svg width="26" height="26" viewBox="0 0 28 28" fill="none">
-        <path d="M14 3L16.5 9.5H23.5L18 13.5L20 20L14 16L8 20L10 13.5L4.5 9.5H11.5L14 3Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+        <path d="M12 2l2.5 7H22l-6.5 4.5 2.5 7L12 17l-6 4.5 2.5-7L3 9h7.5L12 2Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
       </svg>
     ),
     title: 'Certificado Reconhecido',
-    description: 'Certificados com validade profissional, aceitos por associações e entidades do setor equestre.',
+    description: 'Certificados aceitos por associações e entidades do setor equestre brasileiro.',
   },
   {
     icon: (
-      <svg width="26" height="26" viewBox="0 0 28 28" fill="none">
-        <path d="M14 4C8.5 4 4 8.5 4 14C4 19.5 8.5 24 14 24" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-        <path d="M18 4L24 4L24 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M20 8L24 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-        <path d="M14 9V14L17 16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+        <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5"/>
+        <path d="M12 7v5l3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
     ),
     title: 'Acesso Vitalício',
@@ -36,10 +34,10 @@ const benefits = [
   },
   {
     icon: (
-      <svg width="26" height="26" viewBox="0 0 28 28" fill="none">
-        <path d="M14 4a5 5 0 100 10A5 5 0 0014 4z" stroke="currentColor" strokeWidth="1.5"/>
-        <path d="M5 24a9 9 0 0118 0" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-        <path d="M19 14l2 2-2 2M23 16h-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+        <path d="M12 4a4 4 0 100 8 4 4 0 000-8z" stroke="currentColor" strokeWidth="1.5"/>
+        <path d="M4 20a8 8 0 0116 0" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+        <path d="M18 12l2 2-2 2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
     ),
     title: 'Suporte com Especialistas',
@@ -47,10 +45,10 @@ const benefits = [
   },
   {
     icon: (
-      <svg width="26" height="26" viewBox="0 0 28 28" fill="none">
-        <rect x="4" y="6" width="20" height="16" rx="2" stroke="currentColor" strokeWidth="1.5"/>
-        <path d="M4 10h20" stroke="currentColor" strokeWidth="1.5"/>
-        <path d="M10 14h8M10 18h5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+        <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" strokeWidth="1.5"/>
+        <path d="M3 9h18" stroke="currentColor" strokeWidth="1.5"/>
+        <path d="M9 13h6M9 17h4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
       </svg>
     ),
     title: 'Conteúdo Atualizado',
@@ -58,12 +56,10 @@ const benefits = [
   },
   {
     icon: (
-      <svg width="26" height="26" viewBox="0 0 28 28" fill="none">
-        <path d="M5 14c0-5 4-9 9-9s9 4 9 9-4 9-9 9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-        <path d="M10 23C7 21.5 5 18.5 5 14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-        <circle cx="11" cy="11" r="2" fill="currentColor"/>
-        <circle cx="18" cy="11" r="2" fill="currentColor"/>
-        <path d="M11 17s1 2 3.5 2 3.5-2 3.5-2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+        <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+        <circle cx="9" cy="7" r="4" stroke="currentColor" strokeWidth="1.5"/>
+        <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
       </svg>
     ),
     title: 'Comunidade Exclusiva',
@@ -73,50 +69,16 @@ const benefits = [
 
 export default function WhyUs() {
   return (
-    <section className="py-20 lg:py-28 bg-brand-forest relative overflow-hidden">
-      {/* Background texture */}
-      <div className="absolute inset-0 opacity-[0.06]">
-        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-          <pattern id="why-dots" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
-            <circle cx="2" cy="2" r="1.5" fill="white"/>
-          </pattern>
-          <rect width="100%" height="100%" fill="url(#why-dots)"/>
-        </svg>
-      </div>
-      <div className="absolute top-0 right-0 w-[600px] h-[400px] bg-brand-deep/30 rounded-full blur-[80px] -translate-y-1/3" />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[300px] bg-brand-accent/15 rounded-full blur-[60px] translate-y-1/3" />
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+    <section className="py-16 lg:py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-14">
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="flex items-center justify-center gap-3 mb-4"
-          >
-            <span className="h-px w-10 bg-brand-accent" />
-            <span className="font-sans text-brand-accent text-xs font-semibold tracking-[0.2em] uppercase">Por Que Nós</span>
-            <span className="h-px w-10 bg-brand-accent" />
-          </motion.div>
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="font-display text-white text-4xl sm:text-5xl font-bold"
-          >
-            Por que escolher o Instituto Cavalus?
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="font-sans text-white/70 text-lg mt-4 max-w-xl mx-auto"
-          >
-            Formação de qualidade com quem realmente entende do universo equestre.
-          </motion.p>
+        <div className="mb-10">
+          <p className="font-sans text-brand-forest text-xs font-semibold tracking-[0.2em] uppercase mb-2">
+            Por Que Nos Escolher
+          </p>
+          <h2 className="font-display text-brand-secondary text-3xl sm:text-4xl font-bold">
+            Tudo que você precisa para evoluir
+          </h2>
         </div>
 
         {/* Grid */}
@@ -124,21 +86,23 @@ export default function WhyUs() {
           {benefits.map((b, i) => (
             <motion.div
               key={b.title}
-              initial={{ opacity: 0, y: 24 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="group relative bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/15 hover:bg-white/20 hover:border-brand-accent/50 transition-all duration-300"
+              transition={{ duration: 0.4, delay: i * 0.07 }}
+              className="flex gap-4 p-5 rounded-xl border border-gray-100 hover:border-brand-forest/30 hover:bg-surface-light transition-all duration-200"
             >
-              <span className="inline-flex w-12 h-12 items-center justify-center rounded-xl bg-white/15 text-white mb-4 group-hover:bg-brand-accent group-hover:text-brand-deep transition-all duration-300">
+              <span className="flex-shrink-0 w-10 h-10 rounded-lg bg-brand-forest/8 text-brand-forest flex items-center justify-center">
                 {b.icon}
               </span>
-              <h3 className="font-display text-white text-xl font-semibold mb-2">
-                {b.title}
-              </h3>
-              <p className="font-sans text-white/70 text-sm leading-relaxed">
-                {b.description}
-              </p>
+              <div>
+                <h3 className="font-display text-brand-secondary text-sm font-semibold mb-1">
+                  {b.title}
+                </h3>
+                <p className="font-sans text-brand-text text-xs leading-relaxed">
+                  {b.description}
+                </p>
+              </div>
             </motion.div>
           ))}
         </div>

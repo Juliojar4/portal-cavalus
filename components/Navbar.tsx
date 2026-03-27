@@ -16,71 +16,77 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20)
+    const onScroll = () => setScrolled(window.scrollY > 10)
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'bg-brand-forest shadow-lg shadow-brand-deep/30 border-b border-brand-deep/20'
-          : 'bg-gradient-to-r from-brand-deep via-brand-forest to-brand-olive'
+      className={`fixed top-0 left-0 right-0 z-50 bg-white transition-shadow duration-300 ${
+        scrolled ? 'shadow-md' : 'border-b border-gray-100'
       }`}
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+        <div className="flex items-center justify-between h-16 lg:h-[70px]">
+
           {/* Logo */}
-          <Link href="/" className="flex flex-col leading-none group">
-            <span className="font-display text-white text-2xl lg:text-3xl font-semibold tracking-wide drop-shadow">
-              Instituto Cavalus
+          <Link href="/" className="flex items-center gap-2.5 flex-shrink-0">
+            <span className="w-8 h-8 rounded-lg bg-brand-forest flex items-center justify-center flex-shrink-0">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                <path d="M10 2C7 2 5 4.5 5 7c0 2 1 3.5 3 4.5L7.5 16H10L10.5 12C11.2 12.3 12 12.5 13 12.5c2 0 4-1 4.5-3L18 6c0 0-2-2-4-1 0 0 1-2.5-1-4C12 0.5 11 2 10 2z" fill="white"/>
+              </svg>
             </span>
-            <span className="text-white/70 text-xs font-sans font-light tracking-[0.2em] uppercase">
-              O Mundo Equestre em Um Clique
-            </span>
+            <div className="flex flex-col leading-tight">
+              <span className="font-display text-brand-secondary font-bold text-base tracking-tight leading-none">
+                Instituto Cavalus
+              </span>
+              <span className="text-brand-forest text-[10px] font-sans font-semibold tracking-wide">
+                Cursos Equestres Online
+              </span>
+            </div>
           </Link>
 
-          {/* Desktop nav */}
-          <div className="hidden md:flex items-center gap-6 lg:gap-8">
+          {/* Desktop links */}
+          <div className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 scroll={false}
-                className="text-white/85 hover:text-white font-sans text-sm font-medium tracking-wide transition-colors duration-200 relative group"
+                className="font-sans text-sm font-medium text-brand-text hover:text-brand-forest px-4 py-2 rounded-md hover:bg-brand-forest/6 transition-all duration-150"
               >
                 {link.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300 rounded-full" />
               </Link>
             ))}
+          </div>
+
+          {/* CTA */}
+          <div className="hidden md:flex items-center gap-3">
             <Link
               href="#cursos"
               scroll={false}
-              className="bg-white text-brand-forest hover:bg-brand-accent hover:text-white font-sans text-sm font-bold px-5 py-2.5 rounded-full transition-all duration-200 shadow-md hover:shadow-lg"
+              className="font-display text-sm font-semibold bg-brand-forest hover:bg-brand-deep text-white px-5 py-2.5 rounded-lg transition-colors duration-150 shadow-sm"
             >
               Ver Cursos
             </Link>
           </div>
 
-          {/* Mobile hamburger */}
+          {/* Hamburger */}
           <button
-            className="md:hidden flex flex-col gap-1.5 p-2"
+            className="md:hidden p-2 rounded-md text-brand-secondary hover:bg-gray-100 transition-colors"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Menu"
           >
-            <motion.span
-              animate={mobileOpen ? { rotate: 45, y: 7 } : { rotate: 0, y: 0 }}
-              className="block w-6 h-0.5 bg-white origin-center"
-            />
-            <motion.span
-              animate={mobileOpen ? { opacity: 0, x: -8 } : { opacity: 1, x: 0 }}
-              className="block w-6 h-0.5 bg-white"
-            />
-            <motion.span
-              animate={mobileOpen ? { rotate: -45, y: -7 } : { rotate: 0, y: 0 }}
-              className="block w-6 h-0.5 bg-white origin-center"
-            />
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              {mobileOpen ? (
+                <path d="M4 4l12 12M16 4L4 16" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
+              ) : (
+                <>
+                  <path d="M3 6h14M3 10h14M3 14h14" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
+                </>
+              )}
+            </svg>
           </button>
         </div>
       </nav>
@@ -92,29 +98,31 @@ export default function Navbar() {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.25, ease: 'easeInOut' }}
-            className="md:hidden overflow-hidden bg-brand-deep border-t border-white/10"
+            transition={{ duration: 0.2 }}
+            className="md:hidden overflow-hidden bg-white border-t border-gray-100 shadow-lg"
           >
-            <div className="px-4 py-4 flex flex-col gap-1">
+            <div className="px-4 py-3 flex flex-col gap-1">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   scroll={false}
                   onClick={() => setMobileOpen(false)}
-                  className="text-white/85 hover:text-white font-sans text-base py-3 px-2 border-b border-white/10 transition-colors duration-200"
+                  className="font-sans text-sm font-medium text-brand-text hover:text-brand-forest py-2.5 px-3 rounded-md hover:bg-brand-forest/6 transition-colors"
                 >
                   {link.label}
                 </Link>
               ))}
-              <Link
-                href="#cursos"
-                scroll={false}
-                onClick={() => setMobileOpen(false)}
-                className="mt-3 bg-white text-brand-forest font-sans text-sm font-bold px-5 py-3 rounded-full text-center transition-colors duration-200 hover:bg-brand-accent hover:text-white"
-              >
-                Ver Cursos
-              </Link>
+              <div className="pt-2 pb-1">
+                <Link
+                  href="#cursos"
+                  scroll={false}
+                  onClick={() => setMobileOpen(false)}
+                  className="block w-full text-center font-display text-sm font-semibold bg-brand-forest text-white py-3 rounded-lg"
+                >
+                  Ver Cursos
+                </Link>
+              </div>
             </div>
           </motion.div>
         )}

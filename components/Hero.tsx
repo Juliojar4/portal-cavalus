@@ -4,92 +4,106 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 
-const hidden = { opacity: 0, y: 24 }
-const visible = { opacity: 1, y: 0 }
-
 export default function Hero() {
   return (
-    <section className="relative w-full overflow-hidden">
-      {/* Background image — 100% width, natural proportion */}
-      <div className="relative w-full lg:min-h-[750px] aspect-[16/7] sm:aspect-[16/6] lg:aspect-[16/5]">
+    <section className="relative w-full pt-[70px]">
+      {/* Image container — full width, fixed height */}
+      <div className="relative w-full h-[420px] sm:h-[480px] lg:h-[540px]">
         <Image
           src="/hero-horse.jpg"
-          alt="Cavalo ao pôr do sol — Instituto Cavalus"
+          alt="Instituto Cavalus — Cursos Equestres"
           fill
           priority
           sizes="100vw"
           className="object-cover object-center"
         />
 
-        {/* Overlay: left-side dark for text legibility, fade to transparent on right */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/40 to-transparent" />
-        {/* Bottom fade into white page */}
-        <div className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-t from-white to-transparent" />
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/55" />
 
-        {/* Content — vertically centered on the image */}
-        <div className="absolute inset-0 flex items-center">
-          <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20">
-            <div className="max-w-xl">
-              {/* Eyebrow */}
+        {/* Green bottom border accent */}
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-brand-forest" />
+
+        {/* Content */}
+        <div className="absolute inset-0 flex flex-col justify-center">
+          <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
+            <div className="max-w-2xl">
+
               <motion.div
-                initial={hidden}
-                animate={visible}
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="flex items-center gap-3 mb-5"
+                className="inline-flex items-center gap-2 bg-brand-forest/90 text-white text-xs font-sans font-semibold px-3 py-1.5 rounded-full mb-5 uppercase tracking-wide"
               >
-                <span className="h-px w-10 bg-brand-accent" />
-                <span className="font-sans text-brand-accent text-xs font-semibold tracking-[0.25em] uppercase">
-                  Formação Profissional Equestre
-                </span>
+                <span className="w-1.5 h-1.5 rounded-full bg-white" />
+                Plataforma de Cursos Equestres
               </motion.div>
 
-              {/* Headline */}
               <motion.h1
-                initial={hidden}
-                animate={visible}
-                transition={{ duration: 0.7, delay: 0.12 }}
-                className="font-display text-white text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.08] tracking-tight mb-5 drop-shadow-md"
+                initial={{ opacity: 0, y: 18 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.55, delay: 0.1 }}
+                className="font-display text-white font-bold text-3xl sm:text-4xl lg:text-5xl leading-tight mb-4"
               >
-                Formação para o{' '}
-                <span className="text-brand-accent">Mundo Equestre</span>
+                Aprenda com os melhores
+                <br />
+                especialistas do{' '}
+                <span className="text-brand-accent">mundo equestre</span>
               </motion.h1>
 
-              {/* Subtitle */}
               <motion.p
-                initial={hidden}
-                animate={visible}
-                transition={{ duration: 0.7, delay: 0.24 }}
-                className="font-sans text-white/80 text-base sm:text-lg leading-relaxed mb-8 max-w-sm"
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="font-sans text-white/80 text-base sm:text-lg leading-relaxed mb-8 max-w-lg"
               >
-                Cursos online especializados em equitação, manejo, saúde equina e gestão de haras. Do iniciante ao profissional.
+                Cursos online em equitação, saúde equina, manejo, gestão de haras e esportes equestres. Do iniciante ao avançado.
               </motion.p>
 
-              {/* CTAs */}
               <motion.div
-                initial={hidden}
-                animate={visible}
-                transition={{ duration: 0.7, delay: 0.36 }}
+                initial={{ opacity: 0, y: 14 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
                 className="flex flex-wrap gap-3"
               >
                 <Link
                   href="#cursos"
                   scroll={false}
-                  className="inline-flex items-center gap-2 bg-brand-forest hover:bg-brand-deep text-white font-sans font-bold text-sm px-7 py-3.5 rounded-full transition-all duration-200 shadow-lg shadow-brand-forest/40 hover:-translate-y-0.5"
+                  className="inline-flex items-center gap-2 bg-brand-forest hover:bg-brand-deep text-white font-display font-semibold text-sm px-6 py-3 rounded-lg transition-colors duration-150 shadow-lg"
                 >
-                  Explorar Cursos
+                  Ver todos os cursos
                   <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                    <path d="M2.5 7h9M7.5 3.5l3.5 3.5-3.5 3.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M2.5 7h9M7.5 3.5l3.5 3.5-3.5 3.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </Link>
                 <Link
                   href="#sobre"
                   scroll={false}
-                  className="inline-flex items-center gap-2 border-2 border-white/50 text-white hover:border-brand-accent hover:text-brand-accent font-sans font-semibold text-sm px-7 py-3.5 rounded-full transition-all duration-200 backdrop-blur-sm"
+                  className="inline-flex items-center gap-2 bg-white/15 hover:bg-white/25 border border-white/30 text-white font-display font-semibold text-sm px-6 py-3 rounded-lg transition-all duration-150 backdrop-blur-sm"
                 >
-                  Saiba Mais
+                  Conheça o Instituto
                 </Link>
               </motion.div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Stats bar */}
+      <div className="bg-white border-b border-gray-100 shadow-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-wrap items-center justify-center sm:justify-start divide-x divide-gray-100 py-4">
+            {[
+              { value: '500+', label: 'Alunos formados' },
+              { value: '12', label: 'Cursos disponíveis' },
+              { value: '6', label: 'Áreas de estudo' },
+              { value: '10+', label: 'Especialistas' },
+            ].map((s) => (
+              <div key={s.label} className="flex items-center gap-2.5 px-5 sm:px-8 py-1 first:pl-0">
+                <span className="font-display font-bold text-brand-forest text-xl">{s.value}</span>
+                <span className="font-sans text-brand-text text-sm">{s.label}</span>
+              </div>
+            ))}
           </div>
         </div>
       </div>
