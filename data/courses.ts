@@ -1,0 +1,16 @@
+import type { Course } from '@/types'
+
+export const courses: Course[] = [
+  { id: 1,  title: 'Equitação Básica para Iniciantes',              category: 'Equitação',      hours: 20, level: 'Iniciante',     price: 197,  free: false, description: 'Aprenda os fundamentos da equitação com técnicas seguras e eficazes para iniciantes.' },
+  { id: 2,  title: 'Doma Natural e Comunicação com o Cavalo',       category: 'Equitação',      hours: 40, level: 'Intermediário',  price: 397,  free: false, description: 'Desenvolva uma comunicação profunda com seu cavalo através de técnicas de doma natural.' },
+  { id: 3,  title: 'Saúde e Nutrição Equina',                       category: 'Saúde Equina',   hours: 30, level: 'Todos',         price: 297,  free: false, description: 'Entenda as necessidades nutricionais e de saúde dos equinos para garantir seu bem-estar.' },
+  { id: 4,  title: 'Primeiros Socorros para Equinos',               category: 'Saúde Equina',   hours: 15, level: 'Todos',         price: 0,    free: true,  description: 'Saiba como agir em emergências e aplicar os primeiros socorros para equinos corretamente.' },
+  { id: 5,  title: 'Gestão de Haras e Propriedades Rurais',         category: 'Gestão',         hours: 35, level: 'Intermediário',  price: 447,  free: false, description: 'Aprenda a administrar haras e propriedades rurais com eficiência e lucratividade.' },
+  { id: 6,  title: 'Equoterapia: Fundamentos e Prática',            category: 'Equoterapia',    hours: 60, level: 'Avançado',      price: 597,  free: false, description: 'Formação completa em equoterapia para atuar com pessoas com necessidades especiais.' },
+  { id: 7,  title: 'Manejo Reprodutivo Equino',                     category: 'Manejo',         hours: 25, level: 'Intermediário',  price: 347,  free: false, description: 'Domine as técnicas de reprodução e manejo genético de equinos de alta performance.' },
+  { id: 8,  title: 'Treinamento de Cavalos para Esporte',           category: 'Esportes',       hours: 45, level: 'Avançado',      price: 497,  free: false, description: 'Prepare cavalos para competições com métodos de treinamento comprovados e seguros.' },
+  { id: 9,  title: 'Ferração e Cuidados com os Cascos',             category: 'Manejo',         hours: 20, level: 'Todos',         price: 197,  free: false, description: 'Aprenda técnicas de ferração e os cuidados essenciais com a saúde dos cascos equinos.' },
+  { id: 10, title: 'Comportamento e Bem-Estar Animal',              category: 'Saúde Equina',   hours: 30, level: 'Todos',         price: 247,  free: false, description: 'Compreenda o comportamento equino e implemente práticas de bem-estar na propriedade.' },
+  { id: 11, title: 'Preparação para Provas de Salto',               category: 'Esportes',       hours: 50, level: 'Avançado',      price: 547,  free: false, description: 'Prepare-se para competições de hipismo com treinamentos especializados em saltos.' },
+  { id: 12, title: 'Administração de Clínica Veterinária Equina',   category: 'Gestão',         hours: 40, level: 'Intermediário',  price: 397,  free: false, description: 'Gerencie uma clínica veterinária especializada em equinos com excelência administrativa.' },
+]
