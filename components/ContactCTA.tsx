@@ -21,7 +21,7 @@ export default function ContactCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="font-sans text-white/75 text-base sm:text-lg mb-8 max-w-xl mx-auto leading-relaxed"
+          className="font-sans text-white text-base sm:text-lg mb-8 max-w-xl mx-auto leading-relaxed"
         >
           Mais de 500 alunos já transformaram sua relação com os cavalos. Chegou a sua vez.
         </motion.p>
@@ -46,7 +46,7 @@ export default function ContactCTA() {
 
           <a
             href="mailto:contato@institutocavalus.com.br"
-            className="inline-flex items-center gap-2 font-sans text-white/70 hover:text-white text-sm transition-colors duration-150"
+            className="inline-flex items-center gap-2 font-sans text-white text-sm transition-colors duration-150"
           >
             <svg width="15" height="15" viewBox="0 0 16 16" fill="none">
               <rect x="1" y="3" width="14" height="10" rx="2" stroke="currentColor" strokeWidth="1.3"/>
@@ -64,7 +64,7 @@ export default function ContactCTA() {
           className="mt-10 pt-8 border-t border-white/20 flex flex-wrap items-center justify-center gap-6"
         >
           {['Sem mensalidades', 'Acesso imediato', 'Certificado incluído'].map((item) => (
-            <span key={item} className="flex items-center gap-2 font-sans text-white/60 text-sm">
+            <span key={item} className="flex items-center gap-2 font-sans text-white text-sm">
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                 <circle cx="7" cy="7" r="6" stroke="white" strokeWidth="1.2" opacity="0.5"/>
                 <path d="M4.5 7l2 2 3-3" stroke="white" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>

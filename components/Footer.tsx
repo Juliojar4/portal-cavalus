@@ -40,7 +40,7 @@ export default function Footer() {
                 O Mundo Equestre em Um Clique
               </span>
             </Link>
-            <p className="font-sans text-white/40 text-sm leading-relaxed mt-4 mb-6">
+            <p className="font-sans text-white text-sm leading-relaxed mt-4 mb-6">
               A plataforma de referência em formação equestre profissional no Brasil.
             </p>
 
@@ -102,7 +102,7 @@ export default function Footer() {
 
           {/* Quick links */}
           <div>
-            <h4 className="font-sans text-white/70 text-xs font-semibold tracking-[0.18em] mb-5 uppercase">
+            <h4 className="font-sans text-white text-xs font-semibold tracking-[0.18em] mb-5 uppercase">
               Links Rápidos
             </h4>
             <ul className="space-y-3">
@@ -111,7 +111,7 @@ export default function Footer() {
                   <Link
                     href={l.href}
                     scroll={false}
-                    className="font-sans text-white/40 hover:text-brand-accent text-sm transition-colors duration-200 flex items-center gap-2 group"
+                    className="font-sans text-white hover:text-brand-accent text-sm transition-colors duration-200 flex items-center gap-2 group"
                   >
                     <span className="w-3 h-px bg-brand-forest/40 group-hover:w-5 group-hover:bg-brand-accent transition-all duration-200" />
                     {l.label}
@@ -123,7 +123,7 @@ export default function Footer() {
 
           {/* Categories */}
           <div>
-            <h4 className="font-sans text-white/70 text-xs font-semibold tracking-[0.18em] mb-5 uppercase">
+            <h4 className="font-sans text-white text-xs font-semibold tracking-[0.18em] mb-5 uppercase">
               Categorias
             </h4>
             <ul className="space-y-3">
@@ -132,7 +132,7 @@ export default function Footer() {
                   <Link
                     href="#categorias"
                     scroll={false}
-                    className="font-sans text-white/40 hover:text-brand-accent text-sm transition-colors duration-200 flex items-center gap-2 group"
+                    className="font-sans text-white hover:text-brand-accent text-sm transition-colors duration-200 flex items-center gap-2 group"
                   >
                     <span className="w-3 h-px bg-brand-forest/40 group-hover:w-5 group-hover:bg-brand-accent transition-all duration-200" />
                     {cat}
@@ -144,7 +144,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-sans text-white/70 text-xs font-semibold tracking-[0.18em] mb-5 uppercase">
+            <h4 className="font-sans text-white text-xs font-semibold tracking-[0.18em] mb-5 uppercase">
               Contato
             </h4>
             <ul className="space-y-4">
@@ -154,7 +154,7 @@ export default function Footer() {
                     <rect x="1" y="3" width="14" height="10" rx="2" stroke="currentColor" strokeWidth="1.2"/>
                     <path d="M1 5l7 5 7-5" stroke="currentColor" strokeWidth="1.2"/>
                   </svg>
-                  <span className="font-sans text-white/40 group-hover:text-brand-accent text-sm transition-colors duration-200 break-all">
+                  <span className="font-sans text-white group-hover:text-brand-accent text-sm transition-colors duration-200 break-all">
                     contato@institutocavalus.com.br
                   </span>
                 </a>
@@ -164,12 +164,12 @@ export default function Footer() {
                   <circle cx="8" cy="6.5" r="2.5" stroke="currentColor" strokeWidth="1.2"/>
                   <path d="M8 2C5.2 2 3 4.2 3 7c0 3.5 5 8 5 8s5-4.5 5-8c0-2.8-2.2-5-5-5z" stroke="currentColor" strokeWidth="1.2"/>
                 </svg>
-                <span className="font-sans text-white/40 text-sm">São Paulo, Brasil</span>
+                <span className="font-sans text-white text-sm">São Paulo, Brasil</span>
               </li>
             </ul>
 
             <div className="mt-6 pt-5 border-t border-white/6">
-              <p className="font-sans text-white/25 text-xs leading-relaxed">
+              <p className="font-sans text-white text-xs leading-relaxed">
                 Receba novidades sobre cursos e promoções.
               </p>
               <a
@@ -188,15 +188,15 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-white/6">
           <div className="py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="font-sans text-white/20 text-sm">
+            <p className="font-sans text-white text-sm">
               © 2025 Instituto Cavalus. Todos os direitos reservados.
             </p>
             <div className="flex items-center gap-4">
-              <a href="#" className="font-sans text-white/20 hover:text-white/50 text-xs transition-colors duration-200">
+              <a href="#" className="font-sans text-white hover:text-white/70 text-xs transition-colors duration-200">
                 Política de Privacidade
               </a>
-              <span className="text-white/10">·</span>
-              <a href="#" className="font-sans text-white/20 hover:text-white/50 text-xs transition-colors duration-200">
+              <span className="text-white">·</span>
+              <a href="#" className="font-sans text-white hover:text-white/70 text-xs transition-colors duration-200">
                 Termos de Uso
               </a>
             </div>

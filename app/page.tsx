@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
+import HeroLight from '@/components/HeroLight'
 import About from '@/components/About'
 import Categories from '@/components/Categories'
 import Courses from '@/components/Courses'
@@ -14,6 +15,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <HeroLight />
         <Courses />
         <About />
         <Categories />
