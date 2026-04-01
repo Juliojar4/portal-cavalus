@@ -14,9 +14,9 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <Courses />
         <About />
         <Categories />
-        <Courses />
         <WhyUs />
         <Testimonials />
         <ContactCTA />

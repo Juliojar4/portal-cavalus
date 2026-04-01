@@ -1,103 +1,103 @@
 'use client'
 
 import Link from 'next/link'
-import Image from 'next/image'
 import { motion } from 'framer-motion'
+
+const stats = [
+  { value: '500+', label: 'Alunos formados' },
+  { value: '12', label: 'Cursos' },
+  { value: '6', label: 'Áreas' },
+  { value: '10+', label: 'Especialistas' },
+]
 
 export default function Hero() {
   return (
-    <section className="relative w-full pt-[70px]">
-      {/* Image container — full width, fixed height */}
-      <div className="relative w-full h-[420px] sm:h-[480px] lg:h-[540px]">
-        <Image
-          src="/hero-horse.jpg"
-          alt="Instituto Cavalus — Cursos Equestres"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-top"
-        />
+    <section className="relative w-full pt-[70px] bg-surface-dark overflow-hidden">
 
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/55" />
+      {/* Background glows */}
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <div className="absolute top-0 right-0 w-[700px] h-[700px] bg-brand-forest/25 rounded-full blur-[140px] translate-x-1/3 -translate-y-1/3" />
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-brand-deep/30 rounded-full blur-[120px] -translate-x-1/4 translate-y-1/3" />
+      </div>
 
-        {/* Green bottom border accent */}
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-brand-forest" />
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col items-baseline gap-2.5 py-20 sm:py-28 lg:py-32">
 
-        {/* Content */}
-        <div className="absolute inset-0 flex flex-col justify-center">
-          <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
-            <div className="max-w-2xl">
- 
+          {/* ── Left: copy ── */}
+         
 
-              <motion.h1
-                initial={{ opacity: 0, y: 18 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.55, delay: 0.1 }}
-                className="font-display text-white font-bold text-3xl sm:text-4xl lg:text-5xl leading-tight mb-4"
+            {/* Heading */}
+            <motion.h1
+              initial={{ opacity: 0, y: 22 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.55, delay: 0.1 }}
+              className="font-display font-bold text-white text-4xl max-w-[700px] sm:text-5xl lg:text-[3.4rem] xl:text-6xl leading-[1.08] tracking-tight mb-6"
+            >
+              Aprenda com os{' '}
+              <span className="text-brand-accent">melhores especialistas</span>
+              {' '}do mundo equestre
+            </motion.h1>
+
+            {/* Description */}
+            <motion.p
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="font-sans text-white/55 text-lg leading-relaxed mb-10 max-w-lg"
+            >
+              Cursos online em equitação, saúde equina, manejo, gestão de haras e
+              esportes equestres — do iniciante ao profissional.
+            </motion.p>
+
+            {/* CTAs */}
+            <motion.div
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.45, delay: 0.3 }}
+              className="flex flex-wrap gap-3"
+            >
+              <Link
+                href="#cursos"
+                scroll={false}
+                className="inline-flex items-center gap-2 bg-brand-accent hover:bg-brand-olive text-surface-dark font-display font-semibold text-sm px-7 py-3.5 rounded-lg transition-colors duration-200"
               >
-                Aprenda com os melhores
-                <br />
-                especialistas do{' '}
-                <span className="text-brand-accent">mundo equestre</span>
-              </motion.h1>
-
-              <motion.p
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                className="font-sans text-white/80 text-base sm:text-lg leading-relaxed mb-8 max-w-lg"
+                Explorar cursos
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                  <path d="M2.5 7h9M7.5 3.5l3.5 3.5-3.5 3.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </Link>
+              <Link
+                href="#sobre"
+                scroll={false}
+                className="inline-flex items-center gap-2 border border-white/20 hover:border-white/40 text-white/80 hover:text-white font-display font-semibold text-sm px-7 py-3.5 rounded-lg transition-all duration-200"
               >
-                Cursos online em equitação, saúde equina, manejo, gestão de haras e esportes equestres. Do iniciante ao avançado.
-              </motion.p>
+                Conheça o Instituto
+              </Link>
+            </motion.div>
+     
 
-              <motion.div
-                initial={{ opacity: 0, y: 14 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                className="flex flex-wrap gap-3"
-              >
-                <Link
-                  href="#cursos"
-                  scroll={false}
-                  className="inline-flex items-center gap-2 bg-brand-forest hover:bg-brand-deep text-white font-display font-semibold text-sm px-6 py-3 rounded-lg transition-colors duration-150 shadow-lg"
-                >
-                  Ver todos os cursos
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                    <path d="M2.5 7h9M7.5 3.5l3.5 3.5-3.5 3.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </Link>
-                <Link
-                  href="#sobre"
-                  scroll={false}
-                  className="inline-flex items-center gap-2 bg-white/15 hover:bg-white/25 border border-white/30 text-white font-display font-semibold text-sm px-6 py-3 rounded-lg transition-all duration-150 backdrop-blur-sm"
-                >
-                  Conheça o Instituto
-                </Link>
-              </motion.div>
+    
+
+        </div>
+
+        {/* ── Stats row (mobile only) ── */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          className="lg:hidden flex flex-wrap gap-x-8 gap-y-5 border-t border-white/10 py-8"
+        >
+          {stats.map((s) => (
+            <div key={s.label}>
+              <p className="font-display font-bold text-brand-accent text-2xl">{s.value}</p>
+              <p className="font-sans text-white/45 text-sm mt-0.5">{s.label}</p>
             </div>
-          </div>
-        </div>
+          ))}
+        </motion.div>
       </div>
 
-      {/* Stats bar */}
-      <div className="bg-white border-b border-gray-100 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap items-center justify-center sm:justify-start divide-x divide-gray-100 py-4">
-            {[
-              { value: '500+', label: 'Alunos formados' },
-              { value: '12', label: 'Cursos disponíveis' },
-              { value: '6', label: 'Áreas de estudo' },
-              { value: '10+', label: 'Especialistas' },
-            ].map((s) => (
-              <div key={s.label} className="flex items-center gap-2.5 px-5 sm:px-8 py-1 first:pl-0">
-                <span className="font-display font-bold text-brand-forest text-xl">{s.value}</span>
-                <span className="font-sans text-brand-text text-sm">{s.label}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+      {/* Bottom separator */}
+      <div className="h-px bg-gradient-to-r from-transparent via-brand-forest/40 to-transparent" />
     </section>
   )
 }
